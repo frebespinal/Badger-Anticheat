@@ -187,16 +187,16 @@ if Config.Components.AntiWeapons then
         end
     end)
 end
-if Config.NoParticles then
+if Config.Componentes.NoParticles then
 	Citizen.CreateThread(function ()
-    		while true do
-			local xpos = 0.0
-			local ypos = 0.0
-			local zpos = 0.0
-			local radio = 5000000000000.0
-			RemoveParticleFxInRange(xpos, ypos, zpos, radio) -- Removes all Server Particles
-		Citizen.Wait(0)
-    		end
+		local xpos = 0.0
+		local ypos = 0.0
+		local zpos = 0.0
+		local radio = 5000000000000.0
+			while true do
+				RemoveParticleFxInRange(xpos, ypos, zpos, radio) -- Removes all Server Particles
+			Citizen.Wait(0)
+    			end
 	end)
 end
 
